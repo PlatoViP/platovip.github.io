@@ -1,5 +1,5 @@
 Plato Items List
 
-Telegram Channel: https://t.me/platovip
+Telegram Channel: https://t.me/PlatoViP
 
-Plato ID: Amir_Ace
+Plato ID: Amir_Ace , Amir
