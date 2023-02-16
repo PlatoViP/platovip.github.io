@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="PlatoViP Items List">
-        <title>PlatoViP Items</title>
+        <meta name="description" content="لیست آیتم های پلاتو با صدا و عکس">
+        <title>PlatoViP آیتم های پلاتو</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css">
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -241,7 +241,7 @@
                 var table = $( '#comp-table' ).DataTable
                 ( {
                     'search'       : { 'search' : search },
-                    'lengthMenu'   : [ 25, 50, 75, 100 ],
+                    'lengthMenu'   : [ 25, 50, 100, 500 ],
                     'order'        : [ ],
                     'initComplete' : on_table, // function ( ) { setTimeout( on_table.bind( this ), 1000 ) },
                     'language'     :
@@ -288,7 +288,8 @@
                 $( '<br>' ).prependTo( '#comp-table_filter' );
                 
                 var menu_type = $( '<select class="custom-select custom-select-sm form-control form-control-sm"></select>' ).appendTo( $( '<label></label>' ).prependTo( '#comp-table_filter' ) );
-                                $( '<option value="" selected>Any Type همه دسته بندی ها</option>'                                           ).appendTo( menu_type );
+                              //$( '<option disabled selected>&lt;Type&gt;</option>'                                       ).appendTo( menu_type );
+                                $( '<option value="" selected>Any Type</option>'                                           ).appendTo( menu_type );
                 
                 $( '<br>' ).prependTo( '#comp-table_filter' );
                 
@@ -441,7 +442,7 @@
                 
                     $( '#comp-loading img' ).attr( 'src', img.src );
                 
-                }, 3000 );
+                }, 8000 );
             
             }
             
@@ -452,14 +453,14 @@
             <div id="comp-loading">
                 <div class="row">
                     <div class="col text-center">
-                        <img alt="PlatoViP Items" src="https://platovip.github.io/docs/assets/images/loaded.png" onload="on_image( )" />
+                        <img alt="PlatoViP لیست آیتم ها" src="https://platovip.github.io/docs/assets/images/loading.gif" onload="on_image( )" />
                     </div>
                 </div>
             </div>
             <div id="comp-loaded">
                 <div class="row">
                     <div class="col text-center">
-                        <span class="datetime"><b>@PlatoViP:</b> {{ page.datetime }}</span>
+                        <span class="datetime"><b>Last Updated:</b> {{ page.datetime }}</span>
                     </div>
                 </div>
                 <div class="row">
