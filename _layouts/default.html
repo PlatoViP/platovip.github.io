@@ -241,7 +241,7 @@
                 var table = $( '#comp-table' ).DataTable
                 ( {
                     'search'       : { 'search' : search },
-                    'lengthMenu'   : [ 25, 50, 75, 100 ],
+                    'lengthMenu'   : [ 25, 50, 100, 200 ],
                     'order'        : [ ],
                     'initComplete' : on_table, // function ( ) { setTimeout( on_table.bind( this ), 1000 ) },
                     'language'     :
@@ -295,13 +295,13 @@
                 
                 var menu_cat  = $( '<select class="custom-select custom-select-sm form-control form-control-sm"></select>' ).appendTo( $( '<label></label>' ).prependTo( '#comp-table_filter' ) );
                               //$( '<option disabled selected>&lt;Category&gt;</option>'                                   ).appendTo( menu_cat );
-                                $( '<option value="" selected>Any Category</option>'                                       ).appendTo( menu_cat );
-                                $( '<option value="4=1">New</option>'                                                      ).appendTo( menu_cat );
-                                $( '<option value="5=1">Discounted</option>'                                               ).appendTo( menu_cat );
-                                $( '<option value="6=1">Rare</option>'                                                     ).appendTo( menu_cat );
-                                $( '<option value="7=1">Tournament Prize</option>'                                         ).appendTo( menu_cat );
-                                $( '<option value="8=1">Ranked Prize</option>'                                             ).appendTo( menu_cat );
-                                $( '<option value="9=1">Event Prize</option>'                                              ).appendTo( menu_cat );
+                                $( '<option value="" selected>Any Category همه آیتم ها</option>'                                       ).appendTo( menu_cat );
+                                $( '<option value="4=1">New جدید</option>'                                                      ).appendTo( menu_cat );
+                                $( '<option value="5=1">Discounted(^) تخفیف خورده</option>'                                               ).appendTo( menu_cat );
+                                $( '<option value="6=1">Rare(*) کمیاب</option>'                                                     ).appendTo( menu_cat );
+                                $( '<option value="7=1">Tournament Prize جایزه تورنومنت</option>'                                         ).appendTo( menu_cat );
+                                $( '<option value="8=1">Ranked Prize جایزه رنک</option>'                                             ).appendTo( menu_cat );
+                                $( '<option value="9=1">Event Prize جایزه چالش</option>'                                              ).appendTo( menu_cat );
 
                 api.column( 0 ).data( ).unique( ).sort( ).each( function ( type ) {
                 
